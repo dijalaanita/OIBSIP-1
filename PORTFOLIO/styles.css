@@ -1,5 +1,6 @@
 *{
 scroll-behavior: smooth;
+font-family:system-ui;
 }
 body{
 background-color: rgb(35,18,37);
@@ -13,6 +14,12 @@ gap: 23rem;
 width: 100%;
 height: 100px;
 font-family: system-ui;
+}
+header nav{
+position: fixed;
+background-color:rgb(35,20,40);
+top: 0;
+z-index: 1;
 }
 
 nav .logo{
@@ -51,16 +58,32 @@ width: 2rem;
 display: flex;
 justify-content: center;
 align-items: center;
-gap: 0px 400px;
+gap: 0px 500px;
 font-family:system-ui;
 }
 
-.content img {
-width:25rem;
-transform: translateY(0px);
-animation: float 6s ease-in-out infinite;
+.content-img{
 border-radius: 50%;
-margin-right: 200px;
+  box-sizing: border-box;
+  overflow: hidden;
+  box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+  transform: translatey(0px);
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% {
+    box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+    transform: translatey(0px);
+  }
+  50% {
+    box-shadow: 0 25px 15px 0px rgba(0, 0, 0, 0.2);
+    transform: translatey(-20px);
+  }
+  100% {
+    box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+    transform: translatey(0px);
+  }
 }
 
 /* Typewriter effect 1 Front-end Developer*/
@@ -91,6 +114,7 @@ margin-right: 200px;
 
 .intro-text {
   --caret: current-color;
+  position: absolute;
 }
 
 .intro-text::before {
@@ -121,11 +145,14 @@ margin-right: 200px;
 .aboutMe-section{
 padding-top: 4rem;
 text-align: center;
-
 }
-.aboutMe-section a{
-text-decoration:none;
-color: white;
+.aboutMe-section p{
+font-size: 1.5rem;
+}
+
+.aboutMe-section h2{
+font-size: 3rem;
+
 }
 /*  SKILLS SECTION*/
 .skills-section{
@@ -215,20 +242,6 @@ gap: 5rem;
     }
 }
 /* portfolio section */
-/* * { */
-/* 	box-sizing: border-box; */
-/* } */
-
-/* body { */
-/* 	font-family: Lato, sans-serif; */
-/* 	margin: 0; */
-/* 	padding: 1rem; */
-/* 	min-height: 100vh; */
-/* 	display: flex; */
-/* 	justify-content: center; */
-/* 	align-items: center; */
-/* 	background: rgba(20, 20, 20, 1); */
-/* } */
 
 .portfolio-section img {
 	display: block;
@@ -323,7 +336,7 @@ figcaption {
 }
 /*  Contact me section */
 form {
-  width: 60vw;
+width: 90%;
   max-width: 500px;
   min-width: 300px;
   margin: 0 auto;
@@ -334,29 +347,40 @@ label {
   display: block;
   margin: 0.5rem 0;
 }
-
+.contact-section{
+display: flex;
+    justify-content: center;
+    background-color: rgb(26, 14, 28);
+overflow-x: hidden; /* Prevent horizontal overflow */
+        padding: 20px;
+        border-radius: 15%;
+}
 .contact-section div{
 text-align: center;
- border-radius: 5px;
-  background-color: rgb(26, 14, 28);
-  padding-bottom: 5rem;
-  padding-top: 5rem;
+    padding-bottom: 5rem;
+    padding-top: 5rem;
   }
   textarea {
+  width: calc(100% - 20px);
   resize: vertical;
   border-radius: 4px;
   box-sizing: border-box;
   margin-top: 16px;
   border: 2px solid rgb(161,126,252);
   background-color: rgb(26, 14, 28);
+  color: white;
+  padding: 8px;
   }
   input[type=text], input[type=email]{
+  width: calc(100% - 20px);
   border-radius: 4px;
     box-sizing: border-box;
     margin-top: 16px;
     border: 2px solid rgb(161,126,252);
     font-size: 20px;
     background-color: rgb(26, 14, 28);
+    color: white;
+    padding: 8px;
   }
   label{
   font-size: 20px;
@@ -403,3 +427,4 @@ input[type=submit]{
       .linkedin-btn button:hover{
     opacity: 0.8;
       }
+
