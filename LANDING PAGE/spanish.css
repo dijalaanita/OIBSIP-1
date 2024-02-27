@@ -1,0 +1,351 @@
+    @import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+    @import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css');
+    body {
+        color:#333;
+        box-sizing: border-box;
+    }
+    h1,h2,h3{
+    font-family: 'PT Serif', serif;
+    }
+    p{
+    font-family:'Josefin Sans', sans-serif;
+    }
+
+    button{
+    font-family:'Josefin Sans', sans-serif;
+    }
+
+    * {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    header {
+        background-image: url(header-background.jpg);
+        background-color: #f2f2f2;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-attachment: fixed;
+        height: 675px;
+        padding: 10px 0;
+        width: 100%;
+
+    }
+
+    nav {
+        width: 100%;
+        font-size: 16px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        font-family:'Josefin Sans', sans-serif;
+    }
+
+/*     .logo { */
+/*         width: 100px;  *//*i don't think you need this, since you are already applying css with to the logo image itself*/
+/*     } */
+
+    .logo img {
+        width: 200px;
+        position:relative;
+        padding-left: 50px;
+        padding-top: 20px;
+        }
+
+/*         ul { */
+
+/*         } */
+
+
+        ul li {
+          list-style: none;
+          display: inline-block;
+          position: relative;
+          text-decoration: none;
+          text-align: center;
+        }
+/*  trying to target only the ul .lang-menu section*/
+        nav .lang-menu
+        {
+            padding: 0rem 10rem 0rem 0rem;
+        }
+        nav .dropdown
+        {
+            padding: 1rem 0rem 0rem .5rem;
+            z-index: 20;
+
+        }
+        li a {
+          color: black;
+        }
+
+        li a:hover {
+          color: #3ca0e7;
+        }
+
+        li:hover {
+          cursor: pointer;
+        }
+
+        ul li ul {
+          visibility: hidden;
+          opacity: 0;
+          position: absolute;
+          display: none;
+        }
+
+        ul li:hover > ul,
+        ul li ul:hover {
+          visibility: visible;
+          opacity: 1;
+          display: block;
+/*             display: flex; */
+/*             justify-content: right; */
+/*             flex-direction: column; */
+          min-width: 200px; /*this was what was causing the overflow*/s
+          text-align: left;
+          padding-top: 20px;
+          box-shadow: 0px 3px 5px -1px #ccc;
+        }
+
+        ul li ul li {
+          clear: both;
+          width: 100%;
+          text-align: left;
+          margin-bottom: 20px;
+          border-style: none;
+        }
+
+        ul li ul li a:hover {
+          padding-left: 10px;
+          border-left: 2px solid #3ca0e7;
+          transition: all 0.3s ease;
+        }
+
+    a {
+    text-decoration: none;
+    &:hover {
+    color: #3CA0E7;
+    }
+    }
+
+     ul li ul li a
+     {
+     transition: all 0.5s ease;
+     }
+    .secure-section{
+    margin-top: 100px;
+    }
+
+    .top-section{
+    text-align: center;
+    }
+    .top-h1{
+    font-size: 6rem;
+    }
+
+    .bolded{
+    font-family: "Josefin Sans", serif;
+      font-weight: 700;
+      font-style: normal;
+      font-size: 1.5rem;
+      margin-top: -3rem;
+    }
+    .top-btn{
+    width:230px;
+    height:60px;
+    font-size: 20px;
+    margin-top: 5px;
+    }
+    .top-text{
+    font-size: 10px;
+    margin-top: -33px;
+    font-weight: 700;
+    }
+
+    .main-section h2{
+    font-size: 2rem;
+    margin-bottom: 20px;
+    }
+
+    .secure-img{
+    width: 20rem;
+    margin-left: 315px;
+    }
+     .secure-text, .secure-head{
+     margin-right: 315px;
+     margin-left: 0;
+
+     }
+     .secure-col1{
+     margin-bottom:10px;
+     float: right;
+
+     }
+     .secure-col{
+     float: left;
+       width: 15rem;
+      margin-bottom: 10px;
+     }
+
+     .safe-img{
+     width: 20rem;
+     margin-top: -250px;
+     margin-left: 100px;
+     }
+     .safe-col1{
+     margin: 10px;
+     float: right;
+     width: 50px;
+     }
+
+     .safe-text{
+     margin-left: 315px;
+     margin-top: 50px;
+     }
+     .safe-section{
+    content: "";
+    display: table;
+    clear: both;
+    padding: 0 10px;
+     }
+
+     .express-img{
+     width: 20rem;
+     margin-left: 315px;
+     }
+      .express-text, .express-head{
+      margin-right: 315px;
+      margin-left: 0;
+
+      }
+      .express-col1{
+      margin-bottom:10px;
+      float: right;
+
+      }
+      .express-col{
+      float: left;
+        width: 15rem;
+       margin-bottom: 10px;
+      }
+
+     .icons, .icon{
+     width: 7rem;
+    display: flex;
+    flex-direction: row;
+    margin-left: 10px;
+    margin-top:10px;
+    margin-bottom: 10px;
+     }
+     .icon{
+     border: 1px solid rgb(240,240,240);
+     background-color: rgb(240,240,240);
+     border-radius: 25%;
+
+     }
+     .icon:hover{
+     opacity:0.8;
+     }
+    .url2, .urls, .url1  {
+    text-decoration: underline;
+    color: rgb(20,115,89);
+    }
+    .urls a{
+    color: rgb(20,115,89);
+    }
+    .urls{
+    margin-bottom: 40px;
+    }
+
+    button{
+    width:165px;
+    height:40px;
+    cursor: pointer;
+    color: white;
+    font-size: 17px;
+    border-radius: 2rem;
+    border: none;
+    position: relative;
+    background: rgb(20,115,89);
+    transition: 0.1s;
+    text-decoration: none;
+    margin: 50px;
+    }
+
+    button:hover{
+    opacity: 0.8;
+    }
+
+    .express-btn{
+    margin-top: -5px;
+    margin-left: -5px;
+    }
+    .last-section{
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+    margin-left: 240px;
+    margin-top: 150px;
+    text-align: center;
+    }
+
+    .last-section h3{
+    margin-bottom: 20px;
+    }
+    .last-img{
+    width: 20rem;
+    }
+    .url1 a{
+    color: rgb(20,115,89);
+    }
+    .url1{
+    padding: 80px;
+    text-align: center;
+    }
+    .globe{
+    font-family: 'PT Serif', serif;
+    font-weight: 550;
+    font-style: normal;
+    margin-bottom: 40px;
+    }
+    .globe-h3{
+    font-family: 'PT Serif', serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 3rem;
+    margin-bottom: -10px;
+    }
+    .globe-div,.globe-section,.globe-text{
+    background-color: rgb(251,243,243);
+    }
+    .globe-img{
+    width: 50rem;
+    margin-left: 150px;
+    }
+    .globe-div > h2{
+    padding-top: 50px;
+    text-align: center;
+    font-size: 2.5rem;
+    }
+    .globe-text{
+    float:right;
+    margin-right: 300px;
+    }
+    .url2 a{
+    padding-bottom: 80px;
+    color: rgb(20,115,89);
+    }
+    .url2{
+    text-align: center;
+    padding: 80px;
+    }
