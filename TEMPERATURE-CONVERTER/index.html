@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Anita Dijala Temperature Converter">
+    <title>TEMPERATURE CONVERTER</title>
+</head>
+<body>
+<form>
+    <label for="Degree">Degrees<input id="Degree" name="Degree" type="number" required /></label>
+    <label for="Type">Type</label>
+    <select name="Type" id="Type">
+        <option value="Celsius">Celsius</option>
+        <option value="Fahrenheit">Fahrenheit</option>
+        <option value="Kelvin">Kelvin</option>
+    </select>
+    <h3>Convert to:</h3>
+    <input type="radio" id="Celsius1" name="convert" value="Celsius">
+    <label for="Celsius1">Celsius</label><br>
+    <input type="radio" id="Fahrenheit1" name="convert" value="Fahrenheit">
+    <label for="Fahrenheit1">Fahrenheit</label><br>
+    <input type="radio" id="Kelvin1" name="convert" value="Kelvin1">
+    <label for="Kelvin1">Kelvin</label>
+    <div id="result"></div>
+<!--    <input type="submit" value="Convert" onclick="convertTemperature()"/>-->
+    <button type="button" onclick="convertTemperature()">Convert</button>
+</form>
+<script src="script.js"></script>
+</body>
+</html>
