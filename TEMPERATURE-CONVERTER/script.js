@@ -18,7 +18,7 @@ function convertTemperature() {
     else if (unit === 'Celsius' && convert === 'Kelvin')
     {
     result = temperature + 273.15;
-    document.getElementById('result').innerText = `${temperature} Celsius is ${result}Cº`;
+    document.getElementById('result').innerText = `${temperature} Celsius is ${result}Kº`;
     }
     else if (unit === 'Kelvin' && convert === 'Celsius')
     {
