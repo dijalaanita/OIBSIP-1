@@ -2,6 +2,7 @@ function convertTemperature() {
     const temperature = document.getElementById('Degree').value;
     const unit = document.getElementById('Type').value;
     const convert = document.querySelector('input[name="convert"]:checked').value;
+
     let result;
 
     if (unit === 'Celsius' && convert === 'Fahrenheit')
