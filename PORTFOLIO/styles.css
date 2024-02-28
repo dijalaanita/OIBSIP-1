@@ -206,31 +206,27 @@ gap: 5rem;
           display: none;
         }
 
-        .skills-section ul li:hover > ul,
-        .skills-section ul li ul:hover {
-          visibility: visible;
-          opacity: 1;
-          display: block;
-/*             display: flex; */
-/*             justify-content: right; */
-/*             flex-direction: column; */
-          min-width: 200px; /*this was what was causing the overflow*/s
-          text-align: left;
-          padding-top: 20px;
+  .skills-section ul li:hover > ul, .skills-section ul li ul:hover {
+    visibility: visible;
+    opacity: 1;
+    display: block;
+    min-width: 200px; /*this was what was causing the overflow*/s
+    text-align: left;
+    padding-top: 20px;
+    }
+
+  .skills-section ul li ul li {
+    clear: both;
+    width: 100%;
+    text-align: left;
+    margin-bottom: 20px;
+    border-style: none;
         }
 
-        .skills-section ul li ul li {
-          clear: both;
-          width: 100%;
-          text-align: left;
-          margin-bottom: 20px;
-          border-style: none;
-        }
-
-        .skills-section ul li ul li:hover {
-          padding-left: 10px;
-          border-left: 2px solid #3ca0e7;
-          transition: all 0.3s ease;
+  .skills-section ul li ul li:hover {
+    padding-left: 10px;
+    border-left: 2px solid #3ca0e7;
+    transition: all 0.3s ease;
         }
 
      .skills-section ul li ul li
@@ -240,7 +236,6 @@ gap: 5rem;
     .secure-section{
     margin-top: 100px;
     }
-}
 /* portfolio section */
 
 .portfolio-section img {
@@ -428,3 +423,181 @@ input[type=submit]{
     opacity: 0.8;
       }
 
+      @media screen and (max-width: 768px) {
+        nav {
+          gap: 10px; /* Adjust spacing in navigation */
+        }
+      
+        .content {
+          flex-direction: column; /* Stack content vertically */
+          gap: 20px; /* Add spacing between content */
+          text-align: center; /* Center text */
+        }
+      
+        .content-img {
+          margin-top: 20px; /* Add space between image and text */
+        }
+        /* General Styles */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui;
+  background-color: rgb(35, 18, 37);
+  color: white;
+  margin: 0; /* Remove default body margin */
+}
+
+/* Header Navigation */
+header nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgb(35, 20, 40);
+  z-index: 1;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between; /* Adjust space between logo and menu */
+  align-items: center;
+  padding: 15px 20px; /* Add padding for better spacing */
+}
+
+.navbar-logo {
+  font-size: 2rem;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  transition: border-bottom 0.3s;
+}
+
+.nav-links a:hover {
+  border-bottom: 2px solid rgb(161, 125, 252);
+}
+
+/* Main Content */
+.content {
+  padding: 100px 20px 20px; /* Add top padding to push content below fixed navbar */
+}
+
+.content-img {
+  margin-top: 20px; /* Add space between image and text */
+}
+
+/* About Me Section */
+.aboutMe-section {
+  text-align: center;
+  padding: 50px 20px; /* Add padding for better spacing */
+}
+
+/* Skills Section */
+.skills-section {
+  text-align: center;
+  padding: 50px 20px; /* Add padding for better spacing */
+}
+
+.skills-menu {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.skills-menu li {
+  padding-left: 1rem;
+}
+
+.skills-section ul li {
+  list-style: none;
+  position: relative;
+  text-align: center;
+}
+
+/* Portfolio Section */
+.portfolio-section {
+  padding: 50px 20px; /* Add padding for better spacing */
+}
+
+.portfolio-section ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Adjust grid for responsiveness */
+}
+
+.portfolio-stuff {
+  border-radius: 10%;
+  overflow: hidden;
+}
+
+.portfolio-stuff img {
+  width: 100%;
+  height: auto; /* Ensure images maintain aspect ratio */
+  transition: transform 0.3s ease; /* Add transition for hover effect */
+}
+
+.portfolio-stuff:hover img {
+  transform: scale(1.05); /* Scale up image on hover */
+}
+
+/* Contact Section */
+.contact-section {
+  background-color: rgb(26, 14, 28);
+  padding: 50px 20px; /* Add padding for better spacing */
+}
+
+.contact-section .info,
+.contact-section .user {
+  text-align: center;
+  padding-bottom: 30px; /* Add padding for better spacing */
+}
+
+.contact-section form {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.contact-section label {
+  display: block;
+  margin: 10px 0;
+}
+
+.contact-section input,
+.contact-section textarea {
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin: 10px 0;
+  border: 2px solid rgb(161, 126, 252);
+  border-radius: 5px;
+  background-color: rgb(26, 14, 28);
+  color: white;
+}
+
+.contact-section input[type="submit"] {
+  width: 100%;
+  background-color: rgb(161, 126, 252);
+  color: white;
+  border: none;
+  padding: 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.contact-section input[type="submit"]:hover {
+  background-color: rgb(131, 96, 252);
+}
+
+      }      
