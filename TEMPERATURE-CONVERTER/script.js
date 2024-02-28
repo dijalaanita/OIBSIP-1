@@ -7,12 +7,12 @@ function convertTemperature() {
     if (unit === 'Celsius' && convert === 'Fahrenheit')
     {
         result = (temperature * 9 / 5) + 32;
-        document.getElementById('result').innerText = `${temperature} Celsius is ${result}Fº`;
+        document.getElementById('result').innerText = `${temperature} Celsius is ${result.toFixed(2)}Fº`;
     }
     else if (unit === 'Fahrenheit' && convert === 'Celsius')
     {
         result = (temperature - 32) * 5 / 9;
-        document.getElementById('result').innerText = `${temperature} Fahrenheit is ${result}Cº`;
+        document.getElementById('result').innerText = `${temperature} Fahrenheit is ${result.toFixed(2)}Cº`;
     }
     else if (unit === 'Celsius' && convert === 'Kelvin')
     {
